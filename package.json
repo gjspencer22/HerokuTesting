@@ -2,14 +2,15 @@
   "name": "donation-tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "server/index.js",
+  "main": "index.js",
   "scripts": {
+    "heroku-prebuild": "npm install --dev",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "cd server && npm start",
-    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
+    "start:prod": "npm start",
+    "start:dev": "concurrently \"npm run watch\" \"cd client && npm start\"",
+    "install": " cd client && npm i",
     "build": "cd client && npm run build",
-    "seed": "cd server && npm run seed",
+    "seed": "npm run seed",
     "heroku-postbuild": "cd client && npm run build"
   },
   "author": "",
@@ -17,7 +18,8 @@
   "dependencies": {
     "if-env": "^1.0.4",
     "express": "^4.17.1",
-    "mongoose": "^5.13.0"
+    "mongoose": "^5.13.0",
+    "heroku": "^7.54.1"
   },
   "devDependencies": {
     "concurrently": "^5.1.0"
