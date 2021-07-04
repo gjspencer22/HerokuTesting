@@ -11,7 +11,8 @@
     "install": " cd client && npm i",
     "build": "cd client && npm run build",
     "seed": "npm run seed",
-    "heroku-postbuild": "cd client && npm run build"
+    "heroku-postbuild": "cd client && npm run build",
+    "watch": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
