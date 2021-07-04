@@ -1,0 +1,23 @@
+.top-stats {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    padding-left: 50px;
+  }
+  
+  .need-most, .total-donations, .have-most {
+    padding: 100px;
+    text-align: center;
+  }
+  
+  .min, .sum, .max {
+    font-size: 50px;
+    font-weight: bold;
+  }
+  
+  .myDIV {
+  display: none;
+  }
+  
+  
+  
